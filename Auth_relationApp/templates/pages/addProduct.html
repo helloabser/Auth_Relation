@@ -1,0 +1,27 @@
+{% extends 'base/base.html' %}
+
+{% block body %}
+
+<div class="container">
+    <h1>Add product</h1>
+
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <label for="">Product name</label>
+        <input type="text" name="p_name" class="form-control"><br>
+        <label for="">Product price</label>
+        <input type="number" name="p_price" class="form-control"><br>
+        <label for="">Product Description</label>
+        <input type="text" name="p_description" class="form-control"><br>
+        <label for="">Product Image</label>
+        <input type="file" name="p_image" class="form-control"><br>
+
+        <input type="submit" class="btn btn-success" value="Add Product"> 
+    </form>
+</div>
+    
+{% endblock body %}
+
+
+    

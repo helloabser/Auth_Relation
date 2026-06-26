@@ -1,0 +1,31 @@
+{% extends 'base/base.html' %}
+
+{% block body %}
+
+<table class="table">
+
+    <tr>
+        <th>Sl</th>
+        <th>Product name</th>
+        <th>Product Price</th>
+        <th>Ordered By</th>
+        <th>Order Date</th>
+        <th>Order Status</th>
+    </tr>
+
+    
+    {% for i in  orderData %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{i.product.name}}</td>
+        <td>{{i.product.price}}</td>
+        <td>{{i.user.username}}</td>
+        <td>{{i.date}}</td>
+        <td>{{i.status}}</td>
+    </tr>
+        
+    {% endfor %}
+        
+</table>
+   
+{% endblock body %}
